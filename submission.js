@@ -1,6 +1,13 @@
 const findSum = function(array) {
-  // your code here - don't forget to return a number!
+  var sum = 0;
+  for (var i = 0; i < array.length; i++ ){
+    sum += array[i];
 };
+return sum;
+}
+findSum([2,4,6]);
+console.log(findSum([2,4,6]));
+
 
 const findFrequency = function(array) {
   // your code here - don't forget to return an object!
