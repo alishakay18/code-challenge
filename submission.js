@@ -52,8 +52,15 @@ findFrequency(['a', 'b', 'c', 'a', 'b', 'c', 'a', 'a', 'd']);
 
 
 const isPalindrome = function(str) {
-  // your code here - don't forget to return a boolean!
+var word;
+  var lowRegStr = str.toLowerCase().replace(word, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  return reverseStr === lowRegStr;
 };
+
+console.log(isPalindrome('canal')); 
+console.log(isPalindrome('Ana')); 
+
 
 const largestPair = function(array) {
   // your code here - don't forget to return a number!
