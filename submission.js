@@ -5,8 +5,7 @@ const findSum = function(array) {
 };
 return sum;
 }
-findSum([2,4,6]);
-console.log(findSum([2,4,6]));
+
 
 
 const findFrequency = function(array) {
@@ -43,29 +42,28 @@ for (var i=0; i<array.length; i++)
     return acc;
   }, {});
 
+  
 return ("most: " + most + ", least: " + leastFreq);
 
 };
 
-findFrequency(['a', 'b', 'c', 'a', 'b', 'c', 'a', 'a', 'd']);
+
  
 
 
 const isPalindrome = function(str) {
-var word;
-  var lowRegStr = str.toLowerCase().replace(word, '');
-  var reverseStr = lowRegStr.split('').reverse().join(''); 
-  return reverseStr === lowRegStr;
+  var word = str.toLowerCase();
+  var reverseStr = word.split('').reverse().join(''); 
+  return reverseStr === word;
 };
 
-console.log(isPalindrome('canal')); 
-console.log(isPalindrome('Ana')); 
+
 
 
 const largestPair = function(array) {
- var x = 0;
+  var x = 0;
   var y = 0;
-  var p = Number.MIN_SAFE_INTEGER;
+  var p = 0;
   for (var i = 0; i < array.length; i++) {
     x = array[i];
     y = array[i + 1];
@@ -78,7 +76,11 @@ const largestPair = function(array) {
 
 const removeParenth = function(str) {
 var newstr;
-return newstr = str.replace(/[()]/g,'')
+var paren1 = str.indexOf('(')
+var paren2 = str.indexOf(')') +1
+var part1 = str.substr(0,paren1)
+var part2 = str.substr(paren2)
+return newstr = part1 + part2
 };
 
 const scoreScrabble = function(str) {
@@ -91,4 +93,5 @@ const scoreScrabble = function(str) {
         score += letterPoints[str[i]]; 
     }
     return score;
+
 };
